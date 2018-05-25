@@ -2,9 +2,9 @@
 
 return[
    'environment' => 'linux',
-   'base_url' => 'http://haris.com',
+   'base_url' => 'https://harisnaeemofficial.github.io/yd/',
    'path'     => [
-		'youtube-dl'  =>  'C:/wamp/www/resources/files/youtube-dl.exe',
+		'youtube-dl'  =>  'https://harisnaeemofficial.github.io/yd/youtube',
 		 'python'    =>   '',
    
    ],

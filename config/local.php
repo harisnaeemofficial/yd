@@ -4,7 +4,7 @@ return[
    'environment' => 'windows',
    'base_url' => 'http://harisnaeemofficial.github.io/yd',
    'paths'     => [
-		'youtube-dl'  =>  'https://harisnaeemofficial.github.io/yd/youtube-dl.exe',
+		'youtube-dl'  =>  'https://harisnaeemofficial.github.io/yd/youtube',
 		 'python'    =>   '',
    
    ],

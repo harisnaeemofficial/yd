@@ -1,0 +1,99 @@
+{% extends 'default.twig' %}
+{% block content %}
+<div class="row" style="text-align: center;">
+<form action="getplaylist.php">
+<input type="text" class="main-input" name="url" placeholder="Enter a Playlist URL...." style="width:500px;max-width:80%;">
+<input type="submit" value="Get Playlist" class="main-input" id="get-button">
+</form>
+</div>
+<br><br><br><br>
+
+<h1 style="font-weight:100; text-align:center; color:white;"> {{title}} </h1><br>
+
+<div class="container-fluid" style="color:white; max-width:900px;">
+		
+			<div style="padding:20px; border-radius:2px; border: 1px solid rgba(255,255,255,.25);">
+			
+			{% for video in playlist %}
+			
+			<div class="row">
+			
+			  <div class="col-md-2">
+			  
+			  <!-- Thumbnail -->
+			  
+			    <img src="{{video.thumbnail}}" alt="{{video.title}} thumbnail" style="max-width:100px;"><br><br>
+		</div>
+			<div class="col-md-6">
+			
+				<h5>{{video.title}}</h5>
+			<p>Duration : {{video.duration}}</p>
+			<p>Views : {{video.views}}</p>
+		</div>
+		
+		<div class="col-md-3">
+		
+			   {% for format in video.allowed_formats %}
+			       
+				   
+				   
+				   <label for="download">
+					
+					<a href="{{format.url}}" class="dl-link" target="_blank" download>
+			
+			<! -- For Video and Audio -->
+			
+		{% if format.video and format.audio %}
+			<i class="fa fa-video"></i>
+			<i class="fa fa-volume-up"></i>
+		{% endif %}	
+			
+			<! -- For Video not Audio -->
+			
+		{% if format.video and (not format.audio) %}
+			<i class="fa fa-video"></i>
+			
+		{% endif %}	
+			
+			<! -- For Audio Only-->
+			
+		{% if format.audio and (not format.video) %}
+			<i class="fa fa-volume-up"></i>
+			
+			
+	{% endif %}	
+		{{format.extension | upper}} - {{format.additional | upper}}
+		
+			
+									</a></label><br>
+				   
+				   
+				   
+				   {% endfor %}
+				 </div>
+				 
+			</div>
+			<hr>
+					{% endfor %}
+					
+					<div class="container-fluid" style="max-width:900px;">
+						
+			<div style="padding:20px; border-radius:2px;border: 1px solid rgba(255,255,255,0.25);"
+				{% for list in linklists %}
+					<p>Link List For {{list.info | upper}} </p>
+						<textarea class="form-control" cols="30" rows="10">
+							{% for link in list.links %} 
+								{{link.url ~ "\n"}} 
+							{% endfor %}
+						</textarea>
+						<br><br>
+				{% endfor %}
+			</div>
+					
+		</div>
+					
+	</div>
+</div>
+
+
+{% endblock %}

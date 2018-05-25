@@ -1,0 +1,7 @@
+{
+    "require": {
+        "twig/twig": "^1.35",
+        "symfony/process": "^3.4",
+        "hassankhan/config": "^1.0"
+    }
+}

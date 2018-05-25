@@ -1,0 +1,50 @@
+body,html{
+	height:100%;
+	font-family: "seooe UI";
+	
+}
+.bg{
+	background-image : url("/resources/images/bg.jpg");
+	background-repeat : repeat;
+	background-attachment: fixed;
+	
+}
+nav ul li a {
+	color: white!important;
+}
+.main-input{
+	border-style: solid;
+	padding:10px;
+	font-size:17px;
+	border-width:11px;
+	background-color:#141b29;
+	border-color: #595c61;
+	color : #babdc2;
+	
+}
+.main-input:focus{
+	
+	outline : none;
+}
+
+#get-button:hover{
+	border-color:#445269;
+	color:white;
+}
+.dl-link{
+	
+	color : white!important;
+	text-decoration:none;
+	font-weight:200;
+	font-style:normal;
+}
+.dl-link:hover{
+	color: #CCC;
+	text-decoration:none;
+}
+
+
+
+
+
+

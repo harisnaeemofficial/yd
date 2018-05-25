@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang=""en>
+<head>
+<meta charset=UTF-8">
+<title>YT Downloader</title>
+<!--JQuery -->
+<script>
+  src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+<!--bootstrap -->
+  
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+
+
+<!-- fontawesome -->
+<script> src="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700|Roboto:400,500,700"</script>
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+
+<!-- CSS -->
+<link rel="stylesheet" href="{{config.get('base_url')}}/resources/css/main.css">
+
+<link rel="stylesheet" href="shortcut icon" href="{{config.get('base_url')}}/resources/favicon/favicon.ico">
+
+
+</head>
+<body class="bg">
+<nav class="navbar-default" style="background : #21262c; border-radium : 0;border : 0;" role="navigation">
+<div class="container">
+  <div class="navebar-header">
+     <buttin style="button" class="navbar-toggle" data="collapse" data-target="#navbar-brand-centered">
+	 <span class="icon-bar">Toggle Navigation</span>
+	 <span class="icon-bar"></span>
+	 <span class="icon-bar"></span>
+	 </button>
+	 </div>
+	     <div class="collapse navbar-collapse" id="navbar-brand-centered">
+	<ul class="nav navbar-nav">
+		 <li><a href="/index.php">Home</a></li>
+		  <li><a href="/playlist.php">Playlist</a></li>
+	</ul>
+	
+	<ul class="nav navbar-nav navbar-right">
+		 <li><a href="/index.php">Home2</a></li>
+		  <li><a href="/playlist.php">Playlist2</a></li>
+	</ul>
+	
+	</div>
+	</div>
+	</nav>
+	
+	<div class="container">
+	<div class="row" style="color:white; text-align: center;">
+	<br><br><br><br><br><br><br><br>
+	<h1 style=""font-weight:100;">Welcome to YTDownloader By Haris</h1>
+	<p>World's No. 1 Youtube Downloader</p>
+	<hr style="widht:250px">
+	</div>
+	<br>
+	{% block content %}
+	
+	{% endblock %}
+		</div>
+<br><br><br><br><br>		
+</body>
+</html>

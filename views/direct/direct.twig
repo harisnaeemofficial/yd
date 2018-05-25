@@ -1,0 +1,48 @@
+{% extends 'default.twig' %}
+{% block content %}
+<div class="row" style="text-align: center;">
+
+		<p style="color:white;"> {{title}}</p>
+		
+		<script src="../dist/hola_player.dev.js"></script>
+		
+		 <div><h1>Video tag with Hola player - playing MP4</h1></div>
+		<img src="http://video.h-cdn.com/static/mp4/bbb.jpg" thumbnail"> 
+  <video preload="none" class="video-js vjs-default-skin" width="640" height="360" controls>
+   
+    <source src="{{url}}" type="video/mp4">
+  </video>
+		<script>
+    (function(){
+      window.hola_player({
+        poster: 'http://video.h-cdn.com/static/mp4/bbb.jpg',
+        watermark: {
+          image: 'logo.svg',
+          position: 'top-left',
+          url: 'http://holaspark.com',
+          fadeTime: 0,
+        },
+        controls_watermark: {
+          image: 'logo.svg',
+          tooltip: 'Hola Spark',
+          url: 'http://holaspark.com',
+        },
+      });
+    })();
+  </script>
+			<h1><a href="{{url}}" class="btn btn-lg btn-success" download id="download"> Download </a></h1>
+		
+			<br><br>
+		
+		
+		<p style="color:white;"> If not started automatically, Hit the Download button </p>
+		</div>
+		<script>
+			document.addEventListener('DOMContentLoaded', function(){
+			document.getElementById('download').click();
+			});
+		
+		</script>
+
+
+{% endblock %}
